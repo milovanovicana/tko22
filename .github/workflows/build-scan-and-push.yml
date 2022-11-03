@@ -39,6 +39,7 @@ jobs:
           chmod +x ${GITHUB_WORKSPACE}/cache/sysdig-cli-scanner
         else
           echo "sysdig-cli-scanner latest version already downloaded"
+        fi
     - name: Scan the image using sysdig-cli-scanner
       env:
         SECURE_API_TOKEN: ${{ secrets.SECURE_API_TOKEN }}
